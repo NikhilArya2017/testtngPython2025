@@ -1,0 +1,91 @@
+🟢 Basic Git Commands
+csharp
+Copy
+Edit
+git init
+git clone <repo-url>
+git status
+git add <file>
+git add .
+git commit -m "message"
+git log
+git diff
+git show
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+🟡 Branching and Merging
+php-template
+Copy
+Edit
+git branch
+git branch <branch-name>
+git checkout <branch-name>
+git checkout -b <new-branch>
+git merge <branch>
+git rebase <branch>
+git branch -d <branch-name>
+git branch -D <branch-name>
+git log --oneline --graph --all
+🟠 Remote Repositories
+php-template
+Copy
+Edit
+git remote -v
+git remote add origin <url>
+git push -u origin <branch>
+git push
+git pull
+git fetch
+git clone <url>
+git remote remove <name>
+git remote rename <old> <new>
+🔵 Undo and Reset
+pgsql
+Copy
+Edit
+git reset <file>
+git reset --soft HEAD~1
+git reset --mixed HEAD~1
+git reset --hard HEAD~1
+git revert <commit-id>
+git checkout -- <file>
+git clean -f
+git stash
+git stash save "msg"
+git stash list
+git stash apply
+git stash pop
+🟣 Tagging
+pgsql
+Copy
+Edit
+git tag
+git tag <tag-name>
+git tag -a <tag-name> -m "message"
+git show <tag-name>
+git push origin <tag-name>
+git push origin --tags
+🔴 Advanced Commands
+pgsql
+Copy
+Edit
+git cherry-pick <commit-id>
+git bisect start
+git bisect bad
+git bisect good <commit>
+git rebase -i HEAD~n
+git blame <file>
+git reflog
+git archive --format=zip --output=../file.zip master
+git submodule add <repo-url> <path>
+git submodule update --init --recursive
+⚫ Git Aliases & Tools
+csharp
+Copy
+Edit
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+gitk
+git gui
