@@ -89,3 +89,119 @@ git config --global alias.ci commit
 git config --global alias.st status
 gitk
 git gui
+
+
+
+
+🔄 Branch Management
+git switch <branch> – Faster and clearer alternative to checkout.
+
+git switch -c <new-branch> – Create and switch to a new branch.
+
+git branch -d <branch> – Delete a local branch.
+
+git push origin --delete <branch> – Delete a remote branch.
+
+git branch -m <old> <new> – Rename a branch.
+
+🔀 Merging and Rebasing
+git merge <branch> – Merge another branch into the current branch.
+
+git rebase <branch> – Replay your branch commits on top of another.
+
+git rebase -i HEAD~<n> – Interactive rebase to squash, reorder, or edit commits.
+
+git cherry-pick <commit> – Apply a specific commit from another branch.
+
+📌 Tagging (Releases)
+git tag <tag-name> – Create a lightweight tag.
+
+git tag -a <tag-name> -m "message" – Create an annotated tag.
+
+git push origin <tag-name> – Push a tag to GitHub.
+
+git push origin --tags – Push all tags.
+
+🚑 Undo/Reset Operations
+git restore <file> – Restore a file to the last committed state.
+
+git reset --hard HEAD~1 – Reset and delete the last commit.
+
+git reset --soft HEAD~1 – Remove commit but keep changes staged.
+
+git revert <commit> – Revert a commit with a new commit.
+
+🔍 History and Diff
+git log --oneline --graph --all – Visual branch history.
+
+git blame <file> – Show who changed each line and when.
+
+git diff <branch1> <branch2> – See code differences between branches.
+
+git show <commit> – Show a specific commit’s changes and metadata.
+
+🌐 Remote Operations
+git remote -v – Show remote URLs.
+
+git remote add <name> <url> – Add a remote.
+
+git fetch origin – Fetch updates without merging.
+
+git pull --rebase – Pull latest and rebase local changes.
+
+git push -u origin <branch> – Push and set upstream for a branch.
+
+🔐 Stashing Work
+git stash – Save uncommitted changes.
+
+git stash apply – Reapply last stashed changes.
+
+git stash list – Show all stashed entries.
+
+git stash pop – Apply and delete the last stash.
+
+🧠 Advanced GitHub Usage
+Forking & Pull Requests
+Use GitHub UI to fork and submit PRs; locally:
+
+bash
+Copy
+Edit
+git remote add upstream <original-repo-url>
+git fetch upstream
+git rebase upstream/main
+GitHub CLI (gh)
+
+bash
+Copy
+Edit
+gh repo clone <user>/<repo>
+gh pr create --base main --head feature-branch --title "Feature" --body "..."
+gh issue list
+🧪 Advanced Tips
+Squashing Commits:
+
+bash
+Copy
+Edit
+git rebase -i HEAD~3
+# Mark 2 commits as "squash" and edit message
+Fixing last commit without changing hash:
+
+bash
+Copy
+Edit
+git commit --amend --no-edit
+Find commits that changed a file:
+
+bash
+Copy
+Edit
+git log -- <file>
+Create a patch:
+
+bash
+Copy
+Edit
+git format-patch -1 <commit>
+
