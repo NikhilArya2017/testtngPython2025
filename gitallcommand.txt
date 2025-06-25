@@ -88,7 +88,7 @@ git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
 gitk
-git gui
+git goi
 
 
 
